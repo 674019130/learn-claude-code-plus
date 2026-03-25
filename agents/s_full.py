@@ -46,15 +46,12 @@ import uuid
 from pathlib import Path
 from queue import Queue
 
-from anthropic import Anthropic
+from llm_provider import create_provider
 from dotenv import load_dotenv
 
 load_dotenv(override=True)
-if os.getenv("ANTHROPIC_BASE_URL"):
-    os.environ.pop("ANTHROPIC_AUTH_TOKEN", None)
-
 WORKDIR = Path.cwd()
-client = Anthropic(base_url=os.getenv("ANTHROPIC_BASE_URL"))
+client = create_provider()
 MODEL = os.environ["MODEL_ID"]
 
 TEAM_DIR = WORKDIR / ".team"
@@ -180,7 +177,7 @@ def run_subagent(prompt: str, agent_type: str = "Explore") -> str:
     sub_msgs = [{"role": "user", "content": prompt}]
     resp = None
     for _ in range(30):
-        resp = client.messages.create(model=MODEL, messages=sub_msgs, tools=sub_tools, max_tokens=8000)
+        resp = client.create(model=MODEL, messages=sub_msgs, tools=sub_tools, max_tokens=8000)
         sub_msgs.append({"role": "assistant", "content": resp.content})
         if resp.stop_reason != "tool_use":
             break
@@ -247,7 +244,7 @@ def auto_compact(messages: list) -> list:
         for msg in messages:
             f.write(json.dumps(msg, default=str) + "\n")
     conv_text = json.dumps(messages, default=str)[:80000]
-    resp = client.messages.create(
+    resp = client.create(
         model=MODEL,
         messages=[{"role": "user", "content": f"Summarize for continuity:\n{conv_text}"}],
         max_tokens=2000,
@@ -463,7 +460,7 @@ class TeammateManager:
                         return
                     messages.append({"role": "user", "content": json.dumps(msg)})
                 try:
-                    response = client.messages.create(
+                    response = client.create(
                         model=MODEL, system=sys_prompt, messages=messages,
                         tools=tools, max_tokens=8000)
                 except Exception:
@@ -672,7 +669,7 @@ def agent_loop(messages: list):
             messages.append({"role": "user", "content": f"<inbox>{json.dumps(inbox, indent=2)}</inbox>"})
             messages.append({"role": "assistant", "content": "Noted inbox messages."})
         # LLM call
-        response = client.messages.create(
+        response = client.create(
             model=MODEL, system=SYSTEM, messages=messages,
             tools=TOOLS, max_tokens=8000,
         )

@@ -27,16 +27,13 @@ import os
 import subprocess
 from pathlib import Path
 
-from anthropic import Anthropic
+from llm_provider import create_provider
 from dotenv import load_dotenv
 
 load_dotenv(override=True)
 
-if os.getenv("ANTHROPIC_BASE_URL"):
-    os.environ.pop("ANTHROPIC_AUTH_TOKEN", None)
-
 WORKDIR = Path.cwd()
-client = Anthropic(base_url=os.getenv("ANTHROPIC_BASE_URL"))
+client = create_provider()
 MODEL = os.environ["MODEL_ID"]
 TASKS_DIR = WORKDIR / ".tasks"
 
@@ -209,7 +206,7 @@ TOOLS = [
 
 def agent_loop(messages: list):
     while True:
-        response = client.messages.create(
+        response = client.create(
             model=MODEL, system=SYSTEM, messages=messages,
             tools=TOOLS, max_tokens=8000,
         )

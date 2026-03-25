@@ -27,16 +27,13 @@ import os
 import subprocess
 from pathlib import Path
 
-from anthropic import Anthropic
+from llm_provider import create_provider
 from dotenv import load_dotenv
 
 load_dotenv(override=True)
 
-if os.getenv("ANTHROPIC_BASE_URL"):
-    os.environ.pop("ANTHROPIC_AUTH_TOKEN", None)
-
 WORKDIR = Path.cwd()
-client = Anthropic(base_url=os.getenv("ANTHROPIC_BASE_URL"))
+client = create_provider()
 MODEL = os.environ["MODEL_ID"]
 
 SYSTEM = f"You are a coding agent at {WORKDIR}. Use the task tool to delegate exploration or subtasks."
@@ -116,7 +113,7 @@ CHILD_TOOLS = [
 def run_subagent(prompt: str) -> str:
     sub_messages = [{"role": "user", "content": prompt}]  # fresh context
     for _ in range(30):  # safety limit
-        response = client.messages.create(
+        response = client.create(
             model=MODEL, system=SUBAGENT_SYSTEM, messages=sub_messages,
             tools=CHILD_TOOLS, max_tokens=8000,
         )
@@ -143,7 +140,7 @@ PARENT_TOOLS = CHILD_TOOLS + [
 
 def agent_loop(messages: list):
     while True:
-        response = client.messages.create(
+        response = client.create(
             model=MODEL, system=SYSTEM, messages=messages,
             tools=PARENT_TOOLS, max_tokens=8000,
         )

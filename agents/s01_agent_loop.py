@@ -27,15 +27,12 @@ policy, hooks, and lifecycle controls on top.
 import os
 import subprocess
 
-from anthropic import Anthropic
+from llm_provider import create_provider
 from dotenv import load_dotenv
 
 load_dotenv(override=True)
 
-if os.getenv("ANTHROPIC_BASE_URL"):
-    os.environ.pop("ANTHROPIC_AUTH_TOKEN", None)
-
-client = Anthropic(base_url=os.getenv("ANTHROPIC_BASE_URL"))
+client = create_provider()
 MODEL = os.environ["MODEL_ID"]
 
 SYSTEM = f"You are a coding agent at {os.getcwd()}. Use bash to solve tasks. Act, don't explain."
@@ -67,7 +64,7 @@ def run_bash(command: str) -> str:
 # -- The core pattern: a while loop that calls tools until the model stops --
 def agent_loop(messages: list):
     while True:
-        response = client.messages.create(
+        response = client.create(
             model=MODEL, system=SYSTEM, messages=messages,
             tools=TOOLS, max_tokens=8000,
         )

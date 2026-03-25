@@ -50,15 +50,12 @@ import threading
 import time
 from pathlib import Path
 
-from anthropic import Anthropic
+from llm_provider import create_provider
 from dotenv import load_dotenv
 
 load_dotenv(override=True)
-if os.getenv("ANTHROPIC_BASE_URL"):
-    os.environ.pop("ANTHROPIC_AUTH_TOKEN", None)
-
 WORKDIR = Path.cwd()
-client = Anthropic(base_url=os.getenv("ANTHROPIC_BASE_URL"))
+client = create_provider()
 MODEL = os.environ["MODEL_ID"]
 TEAM_DIR = WORKDIR / ".team"
 INBOX_DIR = TEAM_DIR / "inbox"
@@ -175,7 +172,7 @@ class TeammateManager:
             for msg in inbox:
                 messages.append({"role": "user", "content": json.dumps(msg)})
             try:
-                response = client.messages.create(
+                response = client.create(
                     model=MODEL,
                     system=sys_prompt,
                     messages=messages,
@@ -354,7 +351,7 @@ def agent_loop(messages: list):
                 "role": "assistant",
                 "content": "Noted inbox messages.",
             })
-        response = client.messages.create(
+        response = client.create(
             model=MODEL,
             system=SYSTEM,
             messages=messages,
