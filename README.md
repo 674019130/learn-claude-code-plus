@@ -158,8 +158,9 @@ First we fill the workshops. Then the farms, the hospitals, the factories. Then 
     the harness that makes the agent effective in a specific domain.
 ```
 
-**12 progressive sessions, from a simple loop to isolated autonomous execution.**
+**12+1 progressive sessions, from a simple loop to isolated autonomous execution.**
 **Each session adds one harness mechanism. Each mechanism has one motto.**
+**Sessions marked [PLUS] are community extensions.**
 
 > **s01** &nbsp; *"One loop & Bash is all you need"* &mdash; one tool + one loop = an agent
 >
@@ -184,6 +185,8 @@ First we fill the workshops. Then the farms, the hospitals, the factories. Then 
 > **s11** &nbsp; *"Teammates scan the board and claim tasks themselves"* &mdash; no need for the lead to assign each one
 >
 > **s12** &nbsp; *"Each works in its own directory, no interference"* &mdash; tasks manage goals, worktrees manage directories, bound by ID
+>
+> **s13** &nbsp; 🆕 `[PLUS]` *"Knowledge that survives across sessions is proof the agent is growing"* &mdash; file-based persistence + index with on-demand loading
 
 ---
 
@@ -281,6 +284,12 @@ s08  Background Tasks        [6]     s10  Team Protocols          [12]
                                      s12  Worktree Isolation      [16]
                                           task coordination + optional isolated execution lanes
 
+Phase 5: Memory [PLUS]
+=============================
+s13  Memory System             [9]
+     file persistence + index on-demand loading
+     cross-session knowledge accumulation
+
                                      [N] = number of tools
 ```
 
@@ -315,6 +324,7 @@ Available in [English](./docs/en/) | [中文](./docs/zh/) | [日本語](./docs/j
 | [s10](./docs/en/s10-team-protocols.md) | Team Protocols | *Teammates need shared communication rules* |
 | [s11](./docs/en/s11-autonomous-agents.md) | Autonomous Agents | *Teammates scan the board and claim tasks themselves* |
 | [s12](./docs/en/s12-worktree-task-isolation.md) | Worktree + Task Isolation | *Each works in its own directory, no interference* |
+| [s13](./docs/en/s13-memory-system.md) | 🆕 Memory System `[PLUS]` | *Knowledge that survives across sessions is proof the agent is growing* |
 
 ## What's Next -- from understanding to shipping
 

@@ -50,7 +50,8 @@
     "s09": "Agent 团队",
     "s10": "团队协议",
     "s11": "自主 Agent",
-    "s12": "Worktree + 任务隔离"
+    "s12": "Worktree + 任务隔离",
+    "s13": "记忆系统 [PLUS]"
   },
   "layer_labels": {
     "tools": "工具与执行",
@@ -71,6 +72,7 @@
     "s09": "Agent 团队邮箱",
     "s10": "FSM 团队协议",
     "s11": "自主 Agent 循环",
-    "s12": "Worktree 任务隔离"
+    "s12": "Worktree 任务隔离",
+    "s13": "跨会话记忆系统"
   }
 }

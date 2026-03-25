@@ -159,8 +159,9 @@ Claude Code = 一个 agent loop
     让 agent 在特定领域高效工作的 harness。
 ```
 
-**12 个递进式课程, 从简单循环到隔离化的自治执行。**
+**12+1 个递进式课程, 从简单循环到隔离化的自治执行。**
 **每个课程添加一个 harness 机制。每个机制有一句格言。**
+**[PLUS] 标记的课程为社区扩展内容。**
 
 > **s01** &nbsp; *"One loop & Bash is all you need"* &mdash; 一个工具 + 一个循环 = 一个智能体
 >
@@ -185,6 +186,8 @@ Claude Code = 一个 agent loop
 > **s11** &nbsp; *"队友自己看看板, 有活就认领"* &mdash; 不需要领导逐个分配, 自组织
 >
 > **s12** &nbsp; *"各干各的目录, 互不干扰"* &mdash; 任务管目标, worktree 管目录, 按 ID 绑定
+>
+> **s13** &nbsp; 🆕 `[PLUS]` *"跨越会话的知识, 是 agent 成长的证据"* &mdash; 文件持久化 + 索引按需加载, 让 agent 跨会话积累知识
 
 ---
 
@@ -282,6 +285,12 @@ s08  后台任务                [6]     s10  团队协议               [12]
                                      s12  Worktree 隔离          [16]
                                           任务协调 + 按需隔离执行通道
 
+第五阶段: 记忆 [PLUS]
+=============================
+s13  记忆系统                [9]
+     文件持久化 + 索引按需加载
+     跨会话知识积累
+
                                      [N] = 工具数量
 ```
 
@@ -316,6 +325,7 @@ learn-claude-code/
 | [s10](./docs/zh/s10-team-protocols.md) | 团队协议 | *队友之间要有统一的沟通规矩* |
 | [s11](./docs/zh/s11-autonomous-agents.md) | 自治智能体 | *队友自己看看板, 有活就认领* |
 | [s12](./docs/zh/s12-worktree-task-isolation.md) | Worktree + 任务隔离 | *各干各的目录, 互不干扰* |
+| [s13](./docs/zh/s13-memory-system.md) | 🆕 记忆系统 `[PLUS]` | *跨越会话的知识, 是 agent 成长的证据* |
 
 ## 学完之后 -- 从理解到落地
 
