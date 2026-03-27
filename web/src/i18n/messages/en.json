@@ -51,14 +51,16 @@
     "s10": "Team Protocols",
     "s11": "Autonomous Agents",
     "s12": "Worktree + Task Isolation",
-    "s13": "Memory System [PLUS]"
+    "s13": "Memory System [PLUS]",
+    "s14": "Sandbox & Permissions [PLUS]"
   },
   "layer_labels": {
     "tools": "Tools & Execution",
     "planning": "Planning & Coordination",
     "memory": "Memory Management",
     "concurrency": "Concurrency",
-    "collaboration": "Collaboration"
+    "collaboration": "Collaboration",
+    "security": "Security & Permissions"
   },
   "viz": {
     "s01": "The Agent While-Loop",
@@ -73,6 +75,7 @@
     "s10": "FSM Team Protocols",
     "s11": "Autonomous Agent Cycle",
     "s12": "Worktree Task Isolation",
-    "s13": "Cross-Session Memory"
+    "s13": "Cross-Session Memory",
+    "s14": "Five-Layer Sandbox"
   }
 }

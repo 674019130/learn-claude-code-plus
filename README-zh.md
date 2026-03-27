@@ -159,7 +159,7 @@ Claude Code = 一个 agent loop
     让 agent 在特定领域高效工作的 harness。
 ```
 
-**12+1 个递进式课程, 从简单循环到隔离化的自治执行。**
+**12+2 个递进式课程, 从简单循环到隔离化的自治执行。**
 **每个课程添加一个 harness 机制。每个机制有一句格言。**
 **[PLUS] 标记的课程为社区扩展内容。**
 
@@ -188,6 +188,8 @@ Claude Code = 一个 agent loop
 > **s12** &nbsp; *"各干各的目录, 互不干扰"* &mdash; 任务管目标, worktree 管目录, 按 ID 绑定
 >
 > **s13** &nbsp; 🆕 `[PLUS]` *"跨越会话的知识, 是 agent 成长的证据"* &mdash; 文件持久化 + 索引按需加载, 让 agent 跨会话积累知识
+>
+> **s14** &nbsp; 🆕 `[PLUS]` *"Give the agent power, but draw the lines it cannot cross"* &mdash; 五层沙盒 + deny→ask→allow 三级权限
 
 ---
 
@@ -291,6 +293,12 @@ s13  记忆系统                [9]
      文件持久化 + 索引按需加载
      跨会话知识积累
 
+第六阶段: 安全 [PLUS]
+=============================
+s14  沙盒与权限              [7]
+     五层沙盒 + deny→ask→allow
+     安全边界内的自主决策
+
                                      [N] = 工具数量
 ```
 
@@ -326,6 +334,7 @@ learn-claude-code/
 | [s11](./docs/zh/s11-autonomous-agents.md) | 自治智能体 | *队友自己看看板, 有活就认领* |
 | [s12](./docs/zh/s12-worktree-task-isolation.md) | Worktree + 任务隔离 | *各干各的目录, 互不干扰* |
 | [s13](./docs/zh/s13-memory-system.md) | 🆕 记忆系统 `[PLUS]` | *跨越会话的知识, 是 agent 成长的证据* |
+| [s14](./docs/zh/s14-sandbox-permissions.md) | 🆕 沙盒与权限 `[PLUS]` | *Give the agent power, but draw the lines it cannot cross* |
 
 ## 学完之后 -- 从理解到落地
 

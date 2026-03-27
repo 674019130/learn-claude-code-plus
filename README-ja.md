@@ -159,7 +159,7 @@ Claude Code = 一つの agent loop
     Agent を特定ドメインで効果的にする Harness -- の作り方を教える。
 ```
 
-**12+1 の段階的セッション、シンプルなループから分離された自律実行まで。**
+**12+2 の段階的セッション、シンプルなループから分離された自律実行まで。**
 **各セッションは 1 つの Harness メカニズムを追加する。各メカニズムには 1 つのモットーがある。**
 **[PLUS] マークのセッションはコミュニティ拡張コンテンツです。**
 
@@ -188,6 +188,8 @@ Claude Code = 一つの agent loop
 > **s12** &nbsp; *"各自のディレクトリで作業し、互いに干渉しない"* &mdash; タスクは目標を管理、worktree はディレクトリを管理、IDで紐付け
 >
 > **s13** &nbsp; 🆕 `[PLUS]` *"セッションを超えて残る知識は、エージェントの成長の証"* &mdash; ファイル永続化 + インデックスによるオンデマンドロード
+>
+> **s14** &nbsp; 🆕 `[PLUS]` *"Give the agent power, but draw the lines it cannot cross"* &mdash; 5層サンドボックス + deny→ask→allow 権限
 
 ---
 
@@ -291,6 +293,12 @@ s13  メモリシステム             [9]
      ファイル永続化 + インデックスオンデマンドロード
      クロスセッション知識蓄積
 
+第六段階: セキュリティ [PLUS]
+=============================
+s14  サンドボックスと権限       [7]
+     5層サンドボックス + deny→ask→allow
+     明確な境界内での安全な自律
+
                                      [N] = ツール数
 ```
 
@@ -326,6 +334,7 @@ learn-claude-code/
 | [s11](./docs/ja/s11-autonomous-agents.md) | 自律エージェント | *チームメイトが自らボードを見て、仕事を取る* |
 | [s12](./docs/ja/s12-worktree-task-isolation.md) | Worktree + タスク分離 | *各自のディレクトリで作業し、互いに干渉しない* |
 | [s13](./docs/ja/s13-memory-system.md) | 🆕 メモリシステム `[PLUS]` | *セッションを超えて残る知識は、エージェントの成長の証* |
+| [s14](./docs/ja/s14-sandbox-permissions.md) | 🆕 サンドボックスと権限 `[PLUS]` | *Give the agent power, but draw the lines it cannot cross* |
 
 ## 次のステップ -- 理解から出荷へ
 

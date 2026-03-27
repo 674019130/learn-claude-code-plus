@@ -1,5 +1,5 @@
 export const VERSION_ORDER = [
-  "s01", "s02", "s03", "s04", "s05", "s06", "s07", "s08", "s09", "s10", "s11", "s12", "s13"
+  "s01", "s02", "s03", "s04", "s05", "s06", "s07", "s08", "s09", "s10", "s11", "s12", "s13", "s14"
 ] as const;
 
 export const LEARNING_PATH = VERSION_ORDER;
@@ -11,7 +11,7 @@ export const VERSION_META: Record<string, {
   subtitle: string;
   coreAddition: string;
   keyInsight: string;
-  layer: "tools" | "planning" | "memory" | "concurrency" | "collaboration";
+  layer: "tools" | "planning" | "memory" | "concurrency" | "collaboration" | "security";
   prevVersion: string | null;
 }> = {
   s01: { title: "The Agent Loop", subtitle: "Bash is All You Need", coreAddition: "Single-tool agent loop", keyInsight: "The minimal agent kernel is a while loop + one tool", layer: "tools", prevVersion: null },
@@ -27,6 +27,7 @@ export const VERSION_META: Record<string, {
   s11: { title: "Autonomous Agents", subtitle: "Scan Board, Claim Tasks", coreAddition: "Task board polling + timeout-based self-governance", keyInsight: "Teammates scan the board and claim tasks themselves; no need for the lead to assign each one", layer: "collaboration", prevVersion: "s10" },
   s12: { title: "Worktree + Task Isolation", subtitle: "Isolate by Directory", coreAddition: "Composable worktree lifecycle + event stream over a shared task board", keyInsight: "Each works in its own directory; tasks manage goals, worktrees manage directories, bound by ID", layer: "collaboration", prevVersion: "s11" },
   s13: { title: "Memory System", subtitle: "Knowledge That Survives", coreAddition: "Persistent cross-session memory with index + on-demand loading", keyInsight: "Memory is context engineering across time — index stays resident, details load on demand", layer: "memory", prevVersion: "s12" },
+  s14: { title: "Sandbox & Permissions", subtitle: "Draw the Lines", coreAddition: "PermissionManager with deny→ask→allow + five-layer sandbox", keyInsight: "Sandbox is not about limiting the agent — it's about giving it safe autonomy within clear boundaries", layer: "security", prevVersion: "s13" },
 };
 
 export const LAYERS = [
@@ -35,4 +36,5 @@ export const LAYERS = [
   { id: "memory" as const, label: "Memory Management", color: "#8B5CF6", versions: ["s06", "s13"] },
   { id: "concurrency" as const, label: "Concurrency", color: "#F59E0B", versions: ["s08"] },
   { id: "collaboration" as const, label: "Collaboration", color: "#EF4444", versions: ["s09", "s10", "s11", "s12"] },
+  { id: "security" as const, label: "Security & Permissions", color: "#DC2626", versions: ["s14"] },
 ] as const;

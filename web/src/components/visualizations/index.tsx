@@ -20,6 +20,7 @@ const visualizations: Record<
   s11: lazy(() => import("./s11-autonomous-agents")),
   s12: lazy(() => import("./s12-worktree-task-isolation")),
   s13: lazy(() => import("./s13-memory-system")),
+  s14: lazy(() => import("./s14-sandbox-permissions")),
 };
 
 export function SessionVisualization({ version }: { version: string }) {
