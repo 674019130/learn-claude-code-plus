@@ -52,9 +52,9 @@
     "s10": "Team Protocols",
     "s11": "Autonomous Agents",
     "s12": "Worktree + Task Isolation",
-    "s13": "Memory System [PLUS]",
-    "s14": "Sandbox & Permissions [PLUS]",
-    "s15": "Production Teams [PLUS]"
+    "s13": "[PLUS] Memory System",
+    "s14": "[PLUS] Sandbox & Permissions",
+    "s15": "[PLUS] Production Teams"
   },
   "layer_labels": {
     "tools": "Tools & Execution",
