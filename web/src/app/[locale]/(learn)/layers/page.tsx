@@ -18,6 +18,7 @@ const LAYER_BORDER_CLASSES: Record<string, string> = {
   memory: "border-l-purple-500",
   concurrency: "border-l-amber-500",
   collaboration: "border-l-red-500",
+  security: "border-l-red-600",
 };
 
 const LAYER_HEADER_BG: Record<string, string> = {
@@ -26,6 +27,7 @@ const LAYER_HEADER_BG: Record<string, string> = {
   memory: "bg-purple-500",
   concurrency: "bg-amber-500",
   collaboration: "bg-red-500",
+  security: "bg-red-600",
 };
 
 export default function LayersPage() {

@@ -12,7 +12,8 @@
     "planning": "如何组织工作。从简单的待办列表到跨 Agent 共享的依赖感知任务板。",
     "memory": "在上下文限制内保持记忆。压缩策略让 Agent 可以无限工作而不失去连贯性。",
     "concurrency": "非阻塞执行。后台线程和通知总线实现并行工作。",
-    "collaboration": "多 Agent 协作。团队、消息传递和能独立思考的自主队友。"
+    "collaboration": "多 Agent 协作。团队、消息传递和能独立思考的自主队友。",
+    "security": "自主 Agent 的安全边界。路径沙箱、权限规则、OS 级隔离和生命周期钩子。"
   },
   "compare": {
     "title": "版本对比",

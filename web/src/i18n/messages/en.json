@@ -12,7 +12,8 @@
     "planning": "How work is organized. From simple todo lists to dependency-aware task boards shared across agents.",
     "memory": "Keeping context within limits. Compression strategies that let agents work infinitely without losing coherence.",
     "concurrency": "Non-blocking execution. Background threads and notification buses for parallel work.",
-    "collaboration": "Multi-agent coordination. Teams, messaging, and autonomous teammates that think for themselves."
+    "collaboration": "Multi-agent coordination. Teams, messaging, and autonomous teammates that think for themselves.",
+    "security": "Safety boundaries for autonomous agents. Path sandboxing, permission rules, OS-level isolation, and lifecycle hooks."
   },
   "compare": {
     "title": "Compare Versions",

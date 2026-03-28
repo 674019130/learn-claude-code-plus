@@ -14,6 +14,7 @@ const LAYER_DOT_BG: Record<string, string> = {
   memory: "bg-purple-500",
   concurrency: "bg-amber-500",
   collaboration: "bg-red-500",
+  security: "bg-red-600",
 };
 
 const LAYER_LINE_BG: Record<string, string> = {
@@ -22,6 +23,7 @@ const LAYER_LINE_BG: Record<string, string> = {
   memory: "bg-purple-500/30",
   concurrency: "bg-amber-500/30",
   collaboration: "bg-red-500/30",
+  security: "bg-red-600/30",
 };
 
 const LAYER_BAR_BG: Record<string, string> = {
@@ -30,6 +32,7 @@ const LAYER_BAR_BG: Record<string, string> = {
   memory: "bg-purple-500",
   concurrency: "bg-amber-500",
   collaboration: "bg-red-500",
+  security: "bg-red-600",
 };
 
 function getVersionData(id: string) {

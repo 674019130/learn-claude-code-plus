@@ -15,6 +15,7 @@ const LAYER_DOT_COLORS: Record<string, string> = {
   memory: "bg-purple-500",
   concurrency: "bg-amber-500",
   collaboration: "bg-red-500",
+  security: "bg-red-600",
 };
 
 const LAYER_BORDER_COLORS: Record<string, string> = {
@@ -23,6 +24,7 @@ const LAYER_BORDER_COLORS: Record<string, string> = {
   memory: "border-purple-500/30 hover:border-purple-500/60",
   concurrency: "border-amber-500/30 hover:border-amber-500/60",
   collaboration: "border-red-500/30 hover:border-red-500/60",
+  security: "border-red-600/30 hover:border-red-600/60",
 };
 
 const LAYER_BAR_COLORS: Record<string, string> = {
@@ -31,6 +33,7 @@ const LAYER_BAR_COLORS: Record<string, string> = {
   memory: "bg-purple-500",
   concurrency: "bg-amber-500",
   collaboration: "bg-red-500",
+  security: "bg-red-600",
 };
 
 function getVersionData(id: string) {
