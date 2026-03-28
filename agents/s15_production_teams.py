@@ -47,7 +47,7 @@ from pathlib import Path
 
 from llm_provider import create_provider
 from dotenv import load_dotenv
-from s15_agent_types import AGENT_TYPE_REGISTRY, get_type_summary
+from agent_types import AGENT_TYPE_REGISTRY, get_type_summary
 
 load_dotenv(override=True)
 
@@ -96,7 +96,7 @@ class TeamManager:
 
         # Launch worker as separate process
         cmd = [
-            sys.executable, str(Path(__file__).parent / "s15_worker.py"),
+            sys.executable, str(Path(__file__).parent / "team_worker.py"),
             "--name", name,
             "--team", self.team_name,
             "--type", agent_type,

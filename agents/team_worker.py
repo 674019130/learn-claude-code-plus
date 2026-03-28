@@ -26,7 +26,7 @@ from pathlib import Path
 
 from llm_provider import create_provider
 from dotenv import load_dotenv
-from s15_agent_types import AGENT_TYPE_REGISTRY, get_tools_for_type
+from agent_types import AGENT_TYPE_REGISTRY, get_tools_for_type
 
 load_dotenv(override=True)
 
