@@ -21,6 +21,7 @@ const visualizations: Record<
   s12: lazy(() => import("./s12-worktree-task-isolation")),
   s13: lazy(() => import("./s13-memory-system")),
   s14: lazy(() => import("./s14-sandbox-permissions")),
+  s15: lazy(() => import("./s15-production-teams")),
 };
 
 export function SessionVisualization({ version }: { version: string }) {

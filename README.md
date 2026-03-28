@@ -158,7 +158,7 @@ First we fill the workshops. Then the farms, the hospitals, the factories. Then 
     the harness that makes the agent effective in a specific domain.
 ```
 
-**12+2 progressive sessions, from a simple loop to isolated autonomous execution.**
+**12+3 progressive sessions, from a simple loop to isolated autonomous execution.**
 **Each session adds one harness mechanism. Each mechanism has one motto.**
 **Sessions marked [PLUS] are community extensions.**
 
@@ -187,6 +187,10 @@ First we fill the workshops. Then the farms, the hospitals, the factories. Then 
 > **s12** &nbsp; *"Each works in its own directory, no interference"* &mdash; tasks manage goals, worktrees manage directories, bound by ID
 >
 > **s13** &nbsp; 🆕 `[PLUS]` *"Knowledge that survives across sessions is proof the agent is growing"* &mdash; file-based persistence + index with on-demand loading
+>
+> **s14** &nbsp; 🆕 `[PLUS]` *"Give the agent power, but draw the lines it cannot cross"* &mdash; five-layer sandbox + deny→ask→allow
+>
+> **s15** &nbsp; 🆕 `[PLUS]` *"Same patterns, real processes — threads simulate, processes isolate"* &mdash; process-based teams + typed capabilities + foreground/background modes
 
 ---
 
@@ -296,6 +300,12 @@ s14  Sandbox & Permissions     [7]
      five-layer sandbox + deny→ask→allow
      safe autonomy within clear boundaries
 
+Phase 7: Collaboration Evolution [PLUS]
+=============================
+s15  Production Agent Teams    [12]
+     process isolation + typed capabilities
+     foreground/background execution modes
+
                                      [N] = number of tools
 ```
 
@@ -332,6 +342,7 @@ Available in [English](./docs/en/) | [中文](./docs/zh/) | [日本語](./docs/j
 | [s12](./docs/en/s12-worktree-task-isolation.md) | Worktree + Task Isolation | *Each works in its own directory, no interference* |
 | [s13](./docs/en/s13-memory-system.md) | 🆕 Memory System `[PLUS]` | *Knowledge that survives across sessions is proof the agent is growing* |
 | [s14](./docs/en/s14-sandbox-permissions.md) | 🆕 Sandbox & Permissions `[PLUS]` | *Give the agent power, but draw the lines it cannot cross* |
+| [s15](./docs/en/s15-production-teams.md) | 🆕 Production Agent Teams `[PLUS]` | *Same patterns, real processes — threads simulate, processes isolate* |
 
 ## What's Next -- from understanding to shipping
 

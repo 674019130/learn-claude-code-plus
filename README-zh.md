@@ -159,7 +159,7 @@ Claude Code = 一个 agent loop
     让 agent 在特定领域高效工作的 harness。
 ```
 
-**12+2 个递进式课程, 从简单循环到隔离化的自治执行。**
+**12+3 个递进式课程, 从简单循环到隔离化的自治执行。**
 **每个课程添加一个 harness 机制。每个机制有一句格言。**
 **[PLUS] 标记的课程为社区扩展内容。**
 
@@ -190,6 +190,8 @@ Claude Code = 一个 agent loop
 > **s13** &nbsp; 🆕 `[PLUS]` *"跨越会话的知识, 是 agent 成长的证据"* &mdash; 文件持久化 + 索引按需加载, 让 agent 跨会话积累知识
 >
 > **s14** &nbsp; 🆕 `[PLUS]` *"Give the agent power, but draw the lines it cannot cross"* &mdash; 五层沙盒 + deny→ask→allow 三级权限
+>
+> **s15** &nbsp; 🆕 `[PLUS]` *"Same patterns, real processes — threads simulate, processes isolate"* &mdash; 进程级 agent 团队 + 类型化能力 + 前台/后台模式
 
 ---
 
@@ -299,6 +301,12 @@ s14  沙盒与权限              [7]
      五层沙盒 + deny→ask→allow
      安全边界内的自主决策
 
+第七阶段: 协作进化 [PLUS]
+=============================
+s15  生产级 Agent 团队        [12]
+     进程级隔离 + 类型化能力
+     前台/后台执行模式
+
                                      [N] = 工具数量
 ```
 
@@ -335,6 +343,7 @@ learn-claude-code/
 | [s12](./docs/zh/s12-worktree-task-isolation.md) | Worktree + 任务隔离 | *各干各的目录, 互不干扰* |
 | [s13](./docs/zh/s13-memory-system.md) | 🆕 记忆系统 `[PLUS]` | *跨越会话的知识, 是 agent 成长的证据* |
 | [s14](./docs/zh/s14-sandbox-permissions.md) | 🆕 沙盒与权限 `[PLUS]` | *Give the agent power, but draw the lines it cannot cross* |
+| [s15](./docs/zh/s15-production-teams.md) | 🆕 生产级 Agent 团队 `[PLUS]` | *Same patterns, real processes — threads simulate, processes isolate* |
 
 ## 学完之后 -- 从理解到落地
 

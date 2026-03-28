@@ -52,7 +52,8 @@
     "s11": "Autonomous Agents",
     "s12": "Worktree + Task Isolation",
     "s13": "Memory System [PLUS]",
-    "s14": "Sandbox & Permissions [PLUS]"
+    "s14": "Sandbox & Permissions [PLUS]",
+    "s15": "Production Teams [PLUS]"
   },
   "layer_labels": {
     "tools": "Tools & Execution",
@@ -76,6 +77,7 @@
     "s11": "Autonomous Agent Cycle",
     "s12": "Worktree Task Isolation",
     "s13": "Cross-Session Memory",
-    "s14": "Five-Layer Sandbox"
+    "s14": "Five-Layer Sandbox",
+    "s15": "Process-Based Agent Teams"
   }
 }
