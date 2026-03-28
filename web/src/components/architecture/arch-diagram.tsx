@@ -60,6 +60,11 @@ function getLayerColorClasses(versionId: string): {
         border: "border-red-500",
         bg: "bg-red-500/10",
       };
+    case "security":
+      return {
+        border: "border-red-600",
+        bg: "bg-red-600/10",
+      };
     default:
       return {
         border: "border-zinc-500",
